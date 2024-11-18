@@ -8,16 +8,27 @@ export default function QueryProcessor(query: string): string {
   }
 
   if (query.toLowerCase().includes("usb id")) {
-    // TODO añade tu USB ID a continuación
-    // TODO actualiza el caso de prueba correspondiente en __tests__
-    return ( "16-11247" );
+    return "16-11247"; // Tu USB ID
   }
 
-  
   if (query.toLowerCase().includes("name")) {
-    // TODO añade tu USB ID a continuación
-    // TODO actualiza el caso de prueba correspondiente en __tests__
-    return ( "AmarantaVc" );
+    return "AmarantaVc"; // Tu nombre
   }
+
+  // Nueva lógica para operaciones matemáticas
+  const mathMatch = query.match(/(\d+)\s*plus\s*(\d+)/);
+  if (mathMatch) {
+    const num1 = parseInt(mathMatch[1], 10);
+    const num2 = parseInt(mathMatch[2], 10);
+    return (num1 + num2).toString();
+  }
+
+  // Lógica para encontrar el número más grande
+  const largestMatch = query.match(/largest:\s*([\d\s,]+)/);
+  if (largestMatch) {
+    const numbers = largestMatch[1].split(',').map(num => parseInt(num.trim(), 10));
+    return Math.max(...numbers).toString();
+  }
+
   return "";
 }
