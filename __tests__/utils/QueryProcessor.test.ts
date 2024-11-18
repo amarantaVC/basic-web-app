@@ -41,22 +41,52 @@ describe("QueryProcessor", () => {
         expect(response).toBe("94");
     });
 
-    test('should return the sum of 39 plus 93', () => {
-        const query = "What is 39 plus 93?";
+    test('should return the sum of 33 plus 23', () => {
+        const query = "What is 33 plus 23?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe("132");
+        expect(response).toBe("56");
     });
 
-    test('should return the sum of 1 plus 61', () => {
-        const query = "What is 1 plus 61?";
+    test('should return the sum of 32 plus 27', () => {
+        const query = "What is 32 plus 27?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe("62");
+        expect(response).toBe("59");
+    });
+
+    test('should return the sum of 10 plus 69', () => {
+        const query = "What is 10 plus 69?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("79");
+    });
+
+    test('should return the sum of 82 plus 22', () => {
+        const query = "What is 82 plus 22?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("104");
     });
 
     test('should return the largest number from given numbers', () => {
-        const query = "Which of the following numbers is the largest: 37, 17, 51?";
+        const query = "Which of the following numbers is the largest: 61, 96, 30?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe("51");
+        expect(response).toBe("96");
+    });
+
+    test('should return the sum of 86 plus 70', () => {
+        const query = "What is 86 plus 70?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("156");
+    });
+
+    test('should return the sum of 60 plus 70', () => {
+        const query = "What is 60 plus 70?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("130");
+    });
+
+    test('should return the sum of 13 plus 61', () => {
+        const query = "What is 13 plus 61?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("74");
     });
 
     test('should return the sum of 78 plus 37', () => {
@@ -65,9 +95,21 @@ describe("QueryProcessor", () => {
         expect(response).toBe("115");
     });
 
-    test('should return the sum of 8 plus 89', () => {
-        const query = "What is 8 plus 89?";
+    test('should return the largest number from given numbers', () => {
+        const query = "Which of the following numbers is the largest: 31, 17, 51?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe("97");
+        expect(response).toBe("51");
+    });
+
+    test('should return the largest number from given numbers', () => {
+        const query = "Which of the following numbers is the largest: 31, 67, 98?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("98");
+    });
+
+    test('should return the largest number from given numbers', () => {
+        const query = "Which of the following numbers is the largest: 18, 87, 71?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe("87");
     });
 });
