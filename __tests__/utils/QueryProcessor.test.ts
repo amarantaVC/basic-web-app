@@ -149,15 +149,15 @@ describe("QueryProcessor", () => {
       expect(response).toBe("58");
    });
     
-   //test('should return the sum of68 plus72', () => {
-     // const query ="What is68 plus72?";
-     // const response :string=QueryProcessor(query);
-     // expect(response).toBe("140");
-   //});
+   test('should return the sum of68 plus72', () => {
+        const query ="What is68 plus72?";
+        const response :string=QueryProcessor(query);
+        expect(response).toBe("140");
+   });
     
-   //test('should return the sum of8 plus89', () => {
-      //const query ="What is8 plus89?";
-      //const response :string=QueryProcessor(query);
-      //expect(response).toBe("97");
-   //});
+    test('should return the sum of8 plus89', () => {
+        const query ="What is8 plus89?";
+        const response :string=QueryProcessor(query);
+        expect(response).toBe("97");
+    });
 });
